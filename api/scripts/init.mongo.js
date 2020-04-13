@@ -6,10 +6,10 @@ db.products.remove({});
 
 const prodDB = [
   {
-    id: 1, name: 'Pepe Jeans', price: 10, url: 'google.com', category: 'Jeans',
+    id: 1, name: 'Pepe Jeans', price: 10, image: 'google.com', category: 'Jeans',
   },
   {
-    id: 2, name: 'Denim', price: 20, url: 'youtube.com', category: 'Jeans',
+    id: 2, name: 'Denim', price: 20, image: 'youtube.com', category: 'Jeans',
   },
 ];
 

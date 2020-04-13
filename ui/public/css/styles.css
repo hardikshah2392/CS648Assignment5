@@ -27,3 +27,18 @@ width: 200px;
 button {
     width: 100px;
 }
+
+#btn1 {
+    background: none;
+    padding: 0;
+    border: 0;
+    color: blue;
+    text-align: left;
+    text-decoration: underline;
+    cursor: pointer;
+    width: 40px;
+}
+
+#delbtn {
+    width: 125px;
+}

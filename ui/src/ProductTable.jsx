@@ -1,23 +1,25 @@
 import React from 'react';
 import ProductRow from './ProductRow.jsx';
   
-export default class ProductTable extends React.Component {
-    render () {
-        const prodrows = this.props.prods.map(prod => <ProductRow key={prod.id} prod={prod}/>);
-        return (
+export default function ProductTable(props) {
+    const { prods } = props;
+    const deleteProd = props.deleteProd;
+    const prodrows = prods.map(
+    prod => <ProductRow key={prod.id} prod={prod} deleteProd={deleteProd}/>);
+    return (
         <table style={{borderCollapse: "collapse"}}>
             <thead>
-            <tr>
-            <th>Product Name</th>
-            <th>Price</th>
-            <th>Category</th>
-            <th>Image</th>
-            </tr>
+                <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Image</th>
+                <th>Action</th>
+                </tr>
             </thead>
             <tbody>
-            {prodrows}
+                {prodrows}
             </tbody>
         </table>
-        )
-    }
+)
 }

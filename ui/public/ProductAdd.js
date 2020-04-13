@@ -1,4 +1,3 @@
-/* globals React PropTypes */
 export default class ProductAdd extends React.Component {
   constructor() {
     super();

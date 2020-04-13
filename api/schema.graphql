@@ -3,15 +3,23 @@ type Product {
     id: Int
     name: String!
     price: Float
-    url: String
+    image: String
     category: ProductCategory!
 }
 input prodInputs {
     name: String!
     price: Float
-    url: String
+    image: String
     category: ProductCategory!
 }
+
+input prodUpdateInputs {
+    name: String
+    price: Float
+    category: ProductCategory
+    image: String
+}
+
 enum ProductCategory {
     Shirts
     Jeans
@@ -22,7 +30,10 @@ enum ProductCategory {
 ##### Top level declarations
 type Query {
     prodList: [Product!]!
+    prodFind(id: Int!): Product!
 }
 type Mutation {
     addProd(prods:prodInputs!):Product!
+    updateProd(id: Int!, updates: prodUpdateInputs!):Product!
+    delProd(id: Int!): Boolean!
 }
